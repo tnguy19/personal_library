@@ -1,71 +1,59 @@
-.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+body {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: #fff;
+    color: #000;
+}
+header a{
+    color: #000;
+    text-decoration: none;
+    word-wrap: break-word;
 }
 
-.bg-dark {
-    background-color: #343a40 !important;
+#masthead {
+    font-size: 3rem;
 }
 
-@media (min-width: 768px) {
-    .navbar-expand-md {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-    }
+h1, h2, h3, label, header#masthead {
+    line-height: 1em;
 }
-*, ::after, ::before {
-    box-sizing: border-box;
+
+#masthead, h1, h2, h3, small {
+    font-family: valkyrie_c4;
+    font-weight: normal;
+    font-style: normal;
 }
-.navbar {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: .5rem 1rem;
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
-root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+div {
+
+    unicode-bidi: isolate;
+}
+img {
+    float: left;
+    margin-right: 2em;
+    height: auto;
+}
+.link:visited {
+    color: #606;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.sorting-link {
+    color: blue;
+}
+
+.sorting-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
