@@ -24,12 +24,11 @@
                 <div class="abook">
                     <figure><a class="link" href=<%= book.link %>><img src=<%= book.image %> loading="lazy" alt="<%= book.title %>"></a></figure>
                     <h2><%= book.title%></h2>
-                    <small>Date read: <%= book.date_read %>. How strongly I recommend it: <strong><%= book.rating %></strong>/10</small>
+                    <small>Date read: <%= book.date_read %>. How strongly I recommend it: <strong><%= book.rating %></strong>/10. <a href="/edit/<%= book.id%>">Edit</a></small>
                     <p>
                         <%= book.comment %>
                     </p>
-                    <p>See reviews and get the book at <a href=<%= book.link %>>Amazon</a>.
-                    </p>
+                    <p>See reviews and get the book at <a href=<%= book.link %>>Amazon</a>.</p>
                 </div>
                 <br>
             <% });%>
