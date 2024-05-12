@@ -19,7 +19,7 @@
                 <textarea cols="55" rows="1" name="title" wrap="physical"><%= book.title %></textarea><br> 
                 <label for="isbn">ISBN: </label>
                 <textarea cols="55" rows="1" name="isbn" wrap="physical"><%= book.isbn %></textarea><br>
-                <label for="date">Date Read: </label>
+                <label for="date">Date Read (yyyy-mm-dd): </label>
                 <textarea cols="50" rows="1" name="date" wrap="physical"><%= book.date_read %></textarea><br> 
                 <label for="rating">Rating (out of 10): </label>
                 <textarea cols="2" rows="1" name="rating" wrap="physical"><%= book.rating %></textarea><br>
@@ -31,11 +31,19 @@
                     Save Changes
                   </button>
             </form>
-            <form class="button" action="/" method="GET">
-                <button class="btn btn-outline-secondary rounded-pill d-inline-flex align-items-center">
+            <div class="d-flex gap-2 ">
+                <form class="button" action="/delete/<%= book.id%>" method="POST">
+                    <input type="hidden" name="id" value="<%= book.id %>"> <!-- Hidden input to pass over  id -->
+                    <button class="btn btn-outline-secondary rounded-pill d-inline-flex align-items-center">
+                          Delete Review
+                    </button>
+                </form>
+                <form class="button" action="/" method="GET">
+                    <button class="btn btn-outline-secondary rounded-pill d-inline-flex align-items-center">
                       Cancel
-                </button>
-            </form>
+                    </button>
+                </form>
+            </div>
         </div>
         </main>
     <% } %>

@@ -79,6 +79,31 @@ app.post("/edit/:id", async (req,res) => {
   }
 })
 
+app.get("/add", (req,res) => {
+  res.render("add.ejs");
+})
+
+app.post("/add", async (req,res) => {
+  const book = req.body;
+  //console.log(book);
+  try {
+    await db.query("INSERT INTO books (title, isbn, date_read, rating, comment, link) VALUES ($1, $2, $3, $4, $5, $6)", [book.title, book.isbn, book.date, book.rating, book.link, book.comment]);
+    res.redirect('/');
+  } catch (err) {
+    console.log(`Error adding new review for book with title: ${book}:`, err);
+  }
+})
+
+app.post("/delete/:id", async (req,res) => {
+  const deletedPost =  req.body;
+  try {
+    await db.query("DELETE FROM books WHERE id = $1", [deletedPost.id]);
+    res.redirect("/");
+  } catch (err) {
+    console.log(`Error deleting review for book with id: ${deletedPost.id}:`, err);
+  }
+})
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
     //console.log(posts);
