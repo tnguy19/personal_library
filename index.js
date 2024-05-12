@@ -14,7 +14,7 @@ const db = new pg.Client({
   user: "postgres",
   host: "localhost",
   database: "personal_library",
-  password: "Culun2003", //Remove when upload
+  password: "", //Remove when upload
   port: 5432,
 });
 
