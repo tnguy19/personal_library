@@ -1,12 +1,12 @@
 # personal_library
 Website that allows user to post reviews on books that they have read.<br> 
-Features: <br>
+<strong>Features: <strong>
 <ul> 
   <li> User can post, edit, and delete reviews </li> 
   <li> Reviews can be sorted based on rating or by date posted</li>
   <li> Website automatically fetch and display book cover for reviews posted</li>
 </ul>
-Tools and Resources Used: <br>
+<strong>Tools and Resources Used: </strong>
 <ul>
   <li>Front end: EJS, JavaScript, HTML, CSS</li>
   <li>Back end: Express, Axios, Node.js, Database: PostgresSQL</li>
