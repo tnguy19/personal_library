@@ -1,6 +1,6 @@
 # personal_library
 Website that allows user to post reviews on books that they have read.<br> 
-<strong>Features: <strong>
+<strong>Features: </strong>
 <ul> 
   <li> User can post, edit, and delete reviews </li> 
   <li> Reviews can be sorted based on rating or by date posted</li>
